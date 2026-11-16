@@ -1,0 +1,3 @@
+Welcome to AI Engineering!
+I am learning Python file handling.
+My goal is to become an AI Engineer.

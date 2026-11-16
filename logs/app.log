@@ -1,0 +1,41 @@
+2026-11-16 12:35:19,999 - ERROR - Unable to load student records.
+Traceback (most recent call last):
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\storage\file_storage.py", line 46, in load_students
+    Student.from_dict(record)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\models\student.py", line 65, in from_dict
+    student_id=str(data["student_id"]),
+                   ~~~~^^^^^^^^^^^^^^
+KeyError: 'student_id'
+2026-11-16 12:35:20,045 - ERROR - Application startup failed.
+Traceback (most recent call last):
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\storage\file_storage.py", line 46, in load_students
+    Student.from_dict(record)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\models\student.py", line 65, in from_dict
+    student_id=str(data["student_id"]),
+                   ~~~~^^^^^^^^^^^^^^
+KeyError: 'student_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\main.py", line 262, in <module>
+    run_application()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\main.py", line 192, in run_application
+    service = StudentService(storage)
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\services\student_service.py", line 26, in __init__
+    self.students = self.storage.load_students()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\muste\Desktop\ai-engineering\01-python-foundations\src\storage\file_storage.py", line 52, in load_students
+    raise StorageError(
+        "Could not load student records."
+    ) from error
+src.utils.exceptions.StorageError: Could not load student records.
+2026-11-16 12:41:04,399 - INFO - Student management application started.
+2026-11-16 12:41:16,812 - INFO - CSV export completed.
+2026-11-16 12:41:21,851 - INFO - CSV export completed.
+2026-11-16 12:41:31,474 - INFO - Application closed.
+2026-11-16 12:47:17,331 - INFO - Student management application started.
+2026-11-16 12:48:30,008 - INFO - Application closed.
